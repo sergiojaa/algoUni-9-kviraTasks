@@ -27,7 +27,27 @@
 //4. დაწერეთ ფუნქცია სახელად promptAge, რომელიც შეეკითხება მომხმარებელს თავის ასაკს და
 // თუ არასწორად იქნება ასაკი შემოყვანილი, გასივრის ერორს. ეს ფუნქცია გამოიძახეთ isAdult ფუნქციაში,
 // რომელიც ადგენს არის თუ არა მომხმარებელი სრულწლოვანი. გამოიყენეთ try/catch ერორების გასამკლავებლად.
+// function promptAge(){
+//     let age = Number(prompt('enter your age:'))
+//     if(isNaN(age) || age < 0){
+//         throw new Error('invalid age')
+//     }
+//     return age
+// }
+// function isAdult(){
+//     let age = promptAge()
+//     if(age >= 18){
+//         return 'adult'
+//     }else{
+//         return 'minor'
+//     }
+// }
 
+// try{
+//     console.log(isAdult())
+// } catch(error){
+//     console.log(error.message)
+// }
 
 
 //5. დაწერეთ ფუნქცია, რომელიც ცდილობს JSON სტრინგის პარსინგს (მაგალითად სტრინგად ჩაწერილ
@@ -36,3 +56,6 @@
 // (მაგალითად: https://api.github.com/users/temuritsutskiridze). თუ სასურველი პასუხი ვერ
 // მიიღეთ (როცა response.ok არის false), გაისროლეთ ერორი და გამკლავდით მას.
 // გამოიყენეთ async/await სინტაქსი.
+async function fetchGithubUserData(){
+    
+}
