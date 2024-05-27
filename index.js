@@ -1,6 +1,12 @@
 //1. დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს ობიექტს და დააბრუნებს მის name 
 //ფროფერთის მნიშვნელობას. თუ name ფროფერთი არ გააჩნია, დაარეთარნეთ null.
-console.log('hello world')
+// function getObject(obj){
+//     if(obj && typeof obj === 'object' && 'name' in obj){
+//         return obj.name
+//     }
+//     return null
+// }
+// console.log(getObject({"name": "sergi"}))
 //2. გადააწყეთ პირველი დავალება try/catch-ის გამოყენებით. თუ name ფროფერთი არ გააჩნია,
 // გაისროლეთ ერორი და შემდეგ გაუმკლავდით.
 
