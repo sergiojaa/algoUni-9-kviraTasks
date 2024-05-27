@@ -1,8 +1,10 @@
 //1. დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს ობიექტს და დააბრუნებს მის name 
 //ფროფერთის მნიშვნელობას. თუ name ფროფერთი არ გააჩნია, დაარეთარნეთ null.
-
+console.log('hello world')
 //2. გადააწყეთ პირველი დავალება try/catch-ის გამოყენებით. თუ name ფროფერთი არ გააჩნია,
 // გაისროლეთ ერორი და შემდეგ გაუმკლავდით.
+
+
 //3. დაწერეთ ფუნქცია, რომელიც იღებს ორ რიცხვს პარამეტრებად და ცდილობს მათ გაყოფას. 
 //თუ რომელიმე რიცხვის ტიპის არაა, გაისროლეთ ერორი. ასევე გაუმკლავდით იმ შემთხვევასაც, როცა
 // მეორე რიცხვი 0-ია (0-ზე გაყოფა არ შეიძლება).
@@ -52,10 +54,32 @@
 
 //5. დაწერეთ ფუნქცია, რომელიც ცდილობს JSON სტრინგის პარსინგს (მაგალითად სტრინგად ჩაწერილ
 // ობიექტს გადაიყვანს ობიექტში). გამოიყენეთ try/catch იმ ქეისებისთვის, როცა JSON სტრინგი არავალიდურია.
+// function parse(objString){
+//     return JSON.parse(objString)
+// }
+// try{
+//     console.log(parse('{"name": "sergi", "age": 18}'))
+// } catch (error){
+//     console.log(error.message)
+// }
+
+
+
+
 //6. დაწერეთ ფუნქცია, რომელიც აგზავნის რექვესთს GitHub-ის API-ზე და მოაქვს გითჰაბის იუზერის დატა.
 // (მაგალითად: https://api.github.com/users/temuritsutskiridze). თუ სასურველი პასუხი ვერ
 // მიიღეთ (როცა response.ok არის false), გაისროლეთ ერორი და გამკლავდით მას.
 // გამოიყენეთ async/await სინტაქსი.
-async function fetchGithubUserData(){
-    
-}
+// async function fetchGithubUserData(){
+//     const response = await fetch('https://api.github.com/users/sergiojaa')
+//     if(!response.ok){
+//         throw new Error('failed to fetch data')
+//     }
+//     const data = await response.json()
+//     console.log(data)
+// }
+// try{
+//     fetchGithubUserData()
+// } catch(error){
+//     console.log(error.message)
+// }
