@@ -9,7 +9,19 @@
 // console.log(getObject({"name": "sergi"}))
 //2. გადააწყეთ პირველი დავალება try/catch-ის გამოყენებით. თუ name ფროფერთი არ გააჩნია,
 // გაისროლეთ ერორი და შემდეგ გაუმკლავდით.
-
+function getObject(obj){
+  
+   try{
+    if(!('name' in obj)){
+        throw new Error('no name in object')
+    }
+    return obj.name
+   } catch(error){
+    return error.message
+   }
+    
+}
+console.log(getObject({"name": "sergi"}))
 
 //3. დაწერეთ ფუნქცია, რომელიც იღებს ორ რიცხვს პარამეტრებად და ცდილობს მათ გაყოფას. 
 //თუ რომელიმე რიცხვის ტიპის არაა, გაისროლეთ ერორი. ასევე გაუმკლავდით იმ შემთხვევასაც, როცა
