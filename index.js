@@ -1,60 +1,56 @@
 //1. დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს ობიექტს და დააბრუნებს მის name 
 //ფროფერთის მნიშვნელობას. თუ name ფროფერთი არ გააჩნია, დაარეთარნეთ null.
-// function getObject(obj){
-//     if(obj && typeof obj === 'object' && 'name' in obj){
-//         return obj.name
+// function getObject(object){
+//     if(object && typeof object === 'object' && "name" in object ){
+//         return object.name
 //     }
 //     return null
 // }
-// console.log(getObject({"name": "sergi"}))
+// console.log(getObject({"name":"sergi"}))
 //2. გადააწყეთ პირველი დავალება try/catch-ის გამოყენებით. თუ name ფროფერთი არ გააჩნია,
 // გაისროლეთ ერორი და შემდეგ გაუმკლავდით.
-function getObject(obj){
-  
-   try{
-    if(!('name' in obj)){
-        throw new Error('no name in object')
-    }
-    return obj.name
-   } catch(error){
-    return error.message
-   }
-    
-}
-console.log(getObject({"name": "sergi"}))
+// function getObject(object){
+//     try{
+//         if(!('name' in object)){
+//             throw new Error('no name in object')
+//         }
+//         return object.name
+//     } catch(error){
+//         return error.message
+//     }
+// }
+// console.log(getObject({"name":"sergi"}))
 
 //3. დაწერეთ ფუნქცია, რომელიც იღებს ორ რიცხვს პარამეტრებად და ცდილობს მათ გაყოფას. 
 //თუ რომელიმე რიცხვის ტიპის არაა, გაისროლეთ ერორი. ასევე გაუმკლავდით იმ შემთხვევასაც, როცა
 // მეორე რიცხვი 0-ია (0-ზე გაყოფა არ შეიძლება).
-// function divide(a, b){
-//     if(isNaN(a) || isNaN(b)){
-//         throw new Error('both inputs must be numbers')
+// function divideNumbers(num1,num2){
+//     if(isNaN(num1) || isNaN(num2)){
+//         throw new Error('invalid numbers')
 //     }
-//     if(b === 0){
-//         throw new Error('cant divide by 0') 
+//     if(num2 === 0){
+//         throw new Error('cant divide on 0')
 //     }
+//     return num1 / num2
+// }
+// try{
+//     console.log(divideNumbers(20,10))
+// }catch(error){
+//     console.log(error.message)
+// }
 
-//     return a / b;
-// }
-// let firstNumber = Number(prompt('enter first number'))
-// let secondNumber = Number(prompt('enter second number'))
-// try {
-//     console.log(divide(firstNumber, secondNumber))
-// } catch(error){
-//     console.log( error.message)
-// }
 
 //4. დაწერეთ ფუნქცია სახელად promptAge, რომელიც შეეკითხება მომხმარებელს თავის ასაკს და
 // თუ არასწორად იქნება ასაკი შემოყვანილი, გასივრის ერორს. ეს ფუნქცია გამოიძახეთ isAdult ფუნქციაში,
 // რომელიც ადგენს არის თუ არა მომხმარებელი სრულწლოვანი. გამოიყენეთ try/catch ერორების გასამკლავებლად.
-// function promptAge(){
-//     let age = Number(prompt('enter your age:'))
-//     if(isNaN(age) || age < 0){
-//         throw new Error('invalid age')
+// promptAge = () =>{
+//     const age = Number(prompt('enter your age'))
+//     if(isNaN(age) || age === 0){
+//         throw new Error('invalid number')
 //     }
 //     return age
 // }
-// function isAdult(){
+// isAdult = () =>{
 //     let age = promptAge()
 //     if(age >= 18){
 //         return 'adult'
@@ -62,27 +58,23 @@ console.log(getObject({"name": "sergi"}))
 //         return 'minor'
 //     }
 // }
-
 // try{
 //     console.log(isAdult())
-// } catch(error){
+// }catch(error){
 //     console.log(error.message)
 // }
 
 
 //5. დაწერეთ ფუნქცია, რომელიც ცდილობს JSON სტრინგის პარსინგს (მაგალითად სტრინგად ჩაწერილ
 // ობიექტს გადაიყვანს ობიექტში). გამოიყენეთ try/catch იმ ქეისებისთვის, როცა JSON სტრინგი არავალიდურია.
-// function parse(objString){
-//     return JSON.parse(objString)
-// }
+//  function parse(objString){
+//      return JSON.parse(objString)
+//  }
 // try{
-//     console.log(parse('{"name": "sergi", "age": 18}'))
-// } catch (error){
-//     console.log(error.message)
-// }
-
-
-
+//      console.log(parse('{"name": "sergi", "age": 18}')) 
+//     } catch (error){     
+//         console.log(error.message)
+//  }
 
 //6. დაწერეთ ფუნქცია, რომელიც აგზავნის რექვესთს GitHub-ის API-ზე და მოაქვს გითჰაბის იუზერის დატა.
 // (მაგალითად: https://api.github.com/users/temuritsutskiridze). თუ სასურველი პასუხი ვერ
